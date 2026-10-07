@@ -37,3 +37,20 @@
         document.getElementById('password').value = '';
     }
 </script>
+target.classList.add('active');
+        } else if(tabName === 'activities') {
+            document.getElementById('activitiesTab').classList.remove('hidden');
+            event.target.classList.add('active');
+        }
+    }
+
+    function submitHomework() {
+        const answer = document.getElementById('hwAnswer').value;
+        if(answer.trim() !== "") {
+            document.getElementById('hwStatus').innerText = "تم إرسال واجبك بنجاح لمعلمتك!";
+            document.getElementById('hwAnswer').value = "";
+        } else {
+            alert('الرجاء كتابة الإجابة أولاً قبل الإرسال.');
+        }
+    }
+</script>
